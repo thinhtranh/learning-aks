@@ -116,7 +116,16 @@
       "apiVersion": "2024-05-01",
       "name": "[format('myappconfig{0}', take(uniqueString(subscription().id, resourceGroup().id, parameters('randomSeed')), 4))]",
       "location": "[resourceGroup().location]",
-      "identity": { "type": "SystemAssigned" }
+      "sku": {
+          "name": "Standard"
+      },
+      "identity": {
+          "type": "SystemAssigned"
+      },
+      "properties": {
+          "disableLocalAuth": false,
+          "publicNetworkAccess": "Enabled"
+      }
     },
 
     {

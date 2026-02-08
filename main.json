@@ -110,11 +110,15 @@
           "enableRbacAuthorization": true,
           "enableSoftDelete": true,
           "softDeleteRetentionInDays": 7,
-          "publicNetworkAccess": "Enabled"
+          "publicNetworkAccess": "Enabled",
+          "networkAcls": {
+          "defaultAction": "Allow",
+          "bypass": "AzureServices"
+          }
       },
       "sku": {
           "family": "A",
-          "name": "standard"
+          "name": "Standard"
       }
     },
 
@@ -151,4 +155,5 @@
     }
   }
 }
+
 

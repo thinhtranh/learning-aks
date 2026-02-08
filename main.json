@@ -90,8 +90,10 @@
           {
             "name": "systempool",
             "count": 2,
+            "vmSize": "Standard_D2s_v5",
             "osType": "Linux",
-            "mode": "System"
+            "mode": "System",
+            "type": "VirtualMachineScaleSets"
           }
         ],
         "networkProfile": {
@@ -765,3 +767,4 @@
     }
   }
 }
+
